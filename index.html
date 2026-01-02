@@ -34,7 +34,8 @@ p {
 .container {
   display: grid;
   grid-template-areas:
-  "menu content";
+  "menu content"
+  "footer footer";
 
   grid-template-columns: 1fr 2fr;
 
@@ -42,7 +43,7 @@ p {
 
   grid-template-rows: auto 1fr;
   
-  grid-gap: 25px;
+  gap: 25px;
   
   width: 100%;
   max-width: 830px;
@@ -50,14 +51,20 @@ p {
   margin: 0 auto;
   padding: 25px;
 
-  background-color: rgba(6, 7, 15, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);a */
 
-  border: 1px solid pink;
 }
 
 .container div.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  
+  background-color: rgba(6, 7, 15, 1);
+  border: 1px solid pink;
 }
 
 .container div.menu {
@@ -65,6 +72,10 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 30px;
+  
+  background-color: rgba(6, 7, 15, 1);
+  border: 1px solid pink;
 }
 
 .container div.menu ul {
@@ -86,6 +97,10 @@ p {
   display: flex; 
   flex-direction: column;
   gap: 15px;
+  padding: 30px;
+
+  background-color: rgba(6, 7, 15, 1);
+  border: 1px solid pink;
 }
 
 .image {
@@ -95,6 +110,17 @@ p {
 
 .text {
   margin-left: 20px;
+}
+
+.container div.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+
+  background-color: rgba(6, 7, 15, 1);
+  border: 1px solid pink;
 }
 
 
@@ -109,8 +135,6 @@ p {
 
 
 <div class="container">
-	<div class="header">
-	</div>
 	<div class="menu">
 		<h2>menu</h2>
 		<nav>
@@ -141,6 +165,8 @@ p {
 			<p>I draw silly anthropomorphic animals cause animals are so cool. I consider myself a furry, but I don't interact much with the community.</p>
 			<p>I also produce music! I mainly listen to rock. I especially love artists like <a href=https://willyrodriguez.bandcamp.com/ style="color: pink;">WillyRodriguezWasTaken</a>.</p>
 	</div>
+	<div class="footer">
+		<h2></h2>
 </div>
 </body>
 </html>
